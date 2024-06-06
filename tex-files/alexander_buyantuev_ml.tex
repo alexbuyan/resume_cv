@@ -151,7 +151,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {HSE University}{Saint-Petersburg, Russia}
-      {Bachelor of Applied Mathematics and Computer Science}{Sep. 2020 - Aug. 2024}
+      {Bachelor of Applied Mathematics and Computer Science}{Sep. 2020 - June 2024}
       \resumeItemListStart
         \resumeItem{\textbf{Relevant courses}: \textit{Algorithms and Data Structures, C/C++, Java, Python for Web, Python for Backend, Machine Learning, Databases, Computer Networks, Calculus, Linear Algebra, Discrete Mathematics, Probability Theory, Math Statistics}}
         \resumeItem{\textbf{Yandex Data School courses}: \textit{Machine Learning, Natural Language Processing, Reinforcement Learning}}
@@ -166,13 +166,15 @@
       {RL Researcher}{Sep. 2023 - Present}
       {Huawei R\&D, Network Scheduling Team}{Saint Petersburg, Russia}
     \resumeProjectHeading
-          {\underline{\textbf{Linear erasure codes construction using reinforcement learning}} $|$ \emph{Python}}{Sep. 2023 - Present}
+          {\underline{\textbf{Linear erasure codes construction using reinforcement learning}} $|$ \emph{Python}}{Sep. 2023 - June 2024}
           \resumeItemListStart
-            \resumeItem{Researched the application of \textbf{DDQN} and \textbf{SAC} algorithms for designing linear erasure codes}
-            \resumeItem{Developed an evaluation strategy using FastAPI to \textbf{speed up} the training up to \textbf{50 times}}
+            \resumeItem{Developed RL-FEC software to design linear codes for different conditions and limitations of communication network}
+            \resumeItem{Researched the application of different RL algorithms (DDQN, SAC, PPO) for designing linear erasure codes}
+            \resumeItem{Developed \textbf{FastAPI} app to evaluate the performance of linear codes which helped to \textbf{speed up} the training up to \textbf{50 times}}
+            % \resumeItem{Developed an evaluation strategy using FastAPI to \textbf{speed up} the training up to \textbf{50 times}}
             \resumeItem{\textbf{Increased the accuracy} of evaluation from $\mathbf{10^{-3}}$ to $\mathbf{10^{-6}}$}
-            \resumeItem{\textbf{Compared} obtained linear erasure codes with FlexFEC and Reed-Solomon codes in Bernoulli and Simple-Gilbert loss models}
-            \resumeItem{\textbf{Showcased the advantage} of RL designed codes in \textbf{performance} and \textbf{decoding complexity}}
+            \resumeItem{\textbf{Compared} obtained by RL-FEC linear erasure codes with FlexFEC, LDPC and Reed-Solomon codes in BEC and Simple-Gilbert loss model}
+            \resumeItem{\textbf{Showcased the advantage} of RL-FEC software as a \textbf{universal} approach for linear code construction}
           \resumeItemListEnd  
     \resumeWorkExpHeading
       {Software Engineer Intern}{Nov. 2022 - Sep. 2023}
@@ -187,8 +189,9 @@
           {\underline{\textbf{LLVM IR decompiler for Cangjie}} $|$ \emph{C++, Python, GoogleTest}}{Nov. 2022 - June 2023}
           \resumeItemListStart
             \resumeItem{Designed a tool to represent LLVM IR module in C-like format that restores packages, classes and functions from Cangjie source code to \textbf{speed up} compiler's generated code analysis}
-            \resumeItem{Implemented LLVM GEP instruction printer to show class field and it's type when accessed by the pointer to \textbf{improve} code readability}
-            \resumeItem{Downloaded source code from 300+ open projects on Cangjie and created test cases from source code to \textbf{test} the tool}
+            % \resumeItem{Implemented LLVM GEP instruction printer to show class field and it's type when accessed by the pointer to \textbf{improve} code readability}
+            \resumeItem{\textbf{Created test cases} for the tool from 300+ projects on Cangjie}
+            % \resumeItem{Downloaded source code from 300+ open projects on Cangjie and created test cases from source code to \textbf{test} the tool}
             \resumeItem{Developed a parallel testing framework that runs 30 test cases with 100000 lines each under 1 minute to \textbf{fix bugs} in my tool}
             \resumeItem{\textbf{Distributed} the tool inside Cangjie Team for analysis of compiler's generated code by other developers}
           \resumeItemListEnd
@@ -198,6 +201,20 @@
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/alexbuyan/tg_x_rag}{\underline{\textbf{Telegram bot with integrated RAG model}} \faGithub} $|$ \emph{Python}}{June 2024}
+      \resumeItemListStart
+        \resumeItem{\textbf{Combined} \href{https://ollama.com/library/llama3}{\textit{Llama3:8b}} and \href{https://huggingface.co/sentence-transformers}{\textit{sentence-transformers}} embeddings for retrieval-augmented generation}
+        \resumeItem{Used \href{https://python.langchain.com/v0.1/docs/integrations/vectorstores/chroma/}{\textit{Chroma}} vector database to store user's PDF files}
+        \resumeItem{Developed a \textbf{Telegram bot} to upload PDF files and interact with the RAG model}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://github.com/alexbuyan/vk-big-data/blob/hw2/notebooks/hw_spark.ipynb}{\underline{\textbf{Movie rating prediction model in Hadoop cluster}} \faGithub} $|$ \emph{Python, Hadoop, Spark}}{Dec. 2024}
+      \resumeItemListStart
+        \resumeItem{\textbf{Set up} Hadoop cluster and Spark session to work with datasets}
+        \resumeItem{Worked with datasets using \textbf{PySpark} to describe the data}
+        \resumeItem{\textbf{Trained} SGDRegressor to predict the movie rating based on tags dataset}
+      \resumeItemListEnd
     \resumeProjectHeading
       {\href{https://github.com/alexbuyan/nlp_course/blob/2023/week01_embeddings/homework.ipynb}{\underline{\textbf{Multilingual Embedding-based Machine Translation}} \faGithub} $|$ \emph{Python}}{Sep. 2023}
       \resumeItemListStart
@@ -213,23 +230,23 @@
           \resumeItem{Developed an app to interact with the model using PyTube and Gradio}
           \resumeItem{Uploaded project to \textbf{Hugging Face}}
         \resumeItemListEnd
-    \resumeProjectHeading
-        {\href{https://github.com/alexbuyan/ml_projects/tree/main/hybrid_strategy}{\underline{\textbf{Hybrid Strategy for Timeseries}} \faGithub} $|$ \emph{Python}}{Apr. 2022}
-        \resumeItemListStart
-          \resumeItem{Implemented hybrid strategy for timeseries from \href{https://www.kaggle.com/c/demand-forecasting-kernels-only}{\underline{\textbf{this dataset}}}}
-          \resumeItem{The solution got \textbf{MSE 33.97}}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\href{https://github.com/alexbuyan/ml_projects/tree/main/resnet18}{\underline{\textbf{ResNet18}} \faGithub} $|$ \emph{Python}}{Mar. 2021}
-        \resumeItemListStart
-          \resumeItem{Developed ResidualBlock, ResNetLayer, ResNet18 using PyTorch}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\href{https://github.com/alexbuyan/ml_projects/tree/main/backprop}{\underline{\textbf{Backpropagation}} \faGithub} $|$ \emph{Python}}{Feb. 2022}
-        \resumeItemListStart
-          \resumeItem{Implemented backprop for \textbf{BatchNormalization}}
-          \resumeItem{Implemented backprop for \textbf{Dropout}}
-        \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/hybrid_strategy}{\underline{\textbf{Hybrid Strategy for Timeseries}} \faGithub} $|$ \emph{Python}}{Apr. 2022}
+    %     \resumeItemListStart
+    %       \resumeItem{Implemented hybrid strategy for timeseries from \href{https://www.kaggle.com/c/demand-forecasting-kernels-only}{\underline{\textbf{this dataset}}}}
+    %       \resumeItem{The solution got \textbf{MSE 33.97}}
+    %     \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/resnet18}{\underline{\textbf{ResNet18}} \faGithub} $|$ \emph{Python}}{Mar. 2021}
+    %     \resumeItemListStart
+    %       \resumeItem{Developed ResidualBlock, ResNetLayer, ResNet18 using PyTorch}
+    %     \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/backprop}{\underline{\textbf{Backpropagation}} \faGithub} $|$ \emph{Python}}{Feb. 2022}
+    %     \resumeItemListStart
+    %       \resumeItem{Implemented backprop for \textbf{BatchNormalization}}
+    %       \resumeItem{Implemented backprop for \textbf{Dropout}}
+    %     \resumeItemListEnd
 \resumeSubHeadingListEnd
 %-------------------------------------------
 
@@ -238,7 +255,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Programming languages}{: Python, C/C++, Java} \\
-     \textbf{Technologies and Frameworks}{: git, SQL, PyTorch, Docker, FastAPI } \\
+     \textbf{Technologies and Frameworks}{: git, PyTorch, StableBaselines, Gymnasium, Docker, FastAPI, LangChain, SQL } \\
      \textbf{Languages}{: Russian, English (C1)} \\
     }}
  \end{itemize}

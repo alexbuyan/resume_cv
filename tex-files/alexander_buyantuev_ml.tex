@@ -126,6 +126,10 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\achievementsListStart}{\begin{itemize}}
+\newcommand{\achievementsListEnd}{\end{itemize}\vspace{-8pt}}
+\newcommand{\dutiesListStart}{\begin{itemize}}
+\newcommand{\dutiesListEnd}{\end{itemize}\vspace{-10pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,38 +167,56 @@
 \section{Work Experience}
     \resumeSubHeadingListStart
     \resumeWorkExpHeading
-      {RL Researcher}{Sep. 2023 - Present}
+      {ML Engineer}{Sep. 2023 - Present}
       {Huawei R\&D, Network Scheduling Team}{Saint Petersburg, Russia}
     \resumeProjectHeading
-          {\underline{\textbf{Linear erasure codes construction using reinforcement learning}} $|$ \emph{Python}}{Sep. 2023 - June 2024}
-          \resumeItemListStart
-            \resumeItem{Developed RL-FEC software to design linear codes for different conditions and limitations of communication network}
-            \resumeItem{Researched the application of different RL algorithms (DDQN, SAC, PPO) for designing linear erasure codes}
-            \resumeItem{Developed \textbf{FastAPI} app to evaluate the performance of linear codes which helped to \textbf{speed up} the training up to \textbf{50 times}}
-            % \resumeItem{Developed an evaluation strategy using FastAPI to \textbf{speed up} the training up to \textbf{50 times}}
+          {\underline{\textbf{FEC codes construction using reinforcement learning}} $|$ \emph{Python, PyTorch, FastAPI}}{Sep. 2023 - June 2024}
+          \resumeSubSubheading
+            {Duties and responsibilities:}{}
+          \dutiesListStart
+            \resumeItem{Developed RL-FEC software to design FEC codes for different conditions and limitations of communication network}
+            \resumeItem{Researched the application of different RL algorithms (DDQN, SAC, PPO) for designing FEC codes}
+            \resumeItem{Developed FastAPI app to evaluate the performance of FEC codes}
+            \resumeItem{Compared obtained by RL-FEC codes with FlexFEC, LDPC and Reed-Solomon codes in BEC \\and Simple-Gilbert loss model}
+          \dutiesListEnd
+          \resumeSubSubheading
+            {Achievements:}{}
+          \achievementsListStart
             \resumeItem{\textbf{Increased the accuracy} of evaluation from $\mathbf{10^{-3}}$ to $\mathbf{10^{-6}}$}
-            \resumeItem{\textbf{Compared} obtained by RL-FEC linear erasure codes with FlexFEC, LDPC and Reed-Solomon codes in BEC and Simple-Gilbert loss model}
-            \resumeItem{\textbf{Showcased the advantage} of RL-FEC software as a \textbf{universal} approach for linear code construction}
-          \resumeItemListEnd  
+            \resumeItem{\textbf{Speeded up} training up to \textbf{50 times}}
+            \resumeItem{\textbf{Showcased the advantage} of RL-FEC software as a \textbf{universal} approach for FEC codes construction}
+          \achievementsListEnd
     \resumeWorkExpHeading
       {Software Engineer Intern}{Nov. 2022 - Sep. 2023}
       {Huawei R\&D, Cangjie Team}{Saint Petersburg, Russia}
     \resumeProjectHeading
           {\underline{\textbf{CSV support for Data-Driven Testing in Cangjie}} $|$ \emph{Cangjie}}{Sep. 2023}
-          \resumeItemListStart
-            \resumeItem{Implemented CsvParser in Cangjie to \textbf{parse} data from CSV files}
-            \resumeItem{Developed CsvStrategy to provide data for unit tests and \textbf{contributed} it to Cangjie Test Framework}
-          \resumeItemListEnd
+          \resumeSubSubheading
+            {Duties and responsibilities:}{}
+          \dutiesListStart
+            \resumeItem{Implemented CsvParser in Cangjie to parse data from CSV files}
+            \resumeItem{Developed CsvStrategy to provide data for unit tests}
+          \dutiesListEnd
+          \resumeSubSubheading
+            {Achievements:}{}
+          \achievementsListStart
+            \resumeItem{\textbf{Contributed} to Cangjie Test Framework}
+          \achievementsListEnd
     \resumeProjectHeading
           {\underline{\textbf{LLVM IR decompiler for Cangjie}} $|$ \emph{C++, Python, GoogleTest}}{Nov. 2022 - June 2023}
-          \resumeItemListStart
-            \resumeItem{Designed a tool to represent LLVM IR module in C-like format that restores packages, classes and functions from Cangjie source code to \textbf{speed up} compiler's generated code analysis}
-            % \resumeItem{Implemented LLVM GEP instruction printer to show class field and it's type when accessed by the pointer to \textbf{improve} code readability}
-            \resumeItem{\textbf{Created test cases} for the tool from 300+ projects on Cangjie}
-            % \resumeItem{Downloaded source code from 300+ open projects on Cangjie and created test cases from source code to \textbf{test} the tool}
-            \resumeItem{Developed a parallel testing framework that runs 30 test cases with 100000 lines each under 1 minute to \textbf{fix bugs} in my tool}
+          \resumeSubSubheading
+            {Duties and responsibilities:}{}
+          \dutiesListStart
+            \resumeItem{Designed a tool to represent LLVM IR module in C-like format that restores packages, classes and functions from Cangjie source code}
+            \resumeItem{Created test cases for the tool from 300+ projects on Cangjie}
+            \resumeItem{Developed a parallel testing framework that runs 30 test cases with 100000 lines each under 1 minute}
+          \dutiesListEnd
+          \resumeSubSubheading
+            {Achievements:}{}
+          \achievementsListStart
             \resumeItem{\textbf{Distributed} the tool inside Cangjie Team for analysis of compiler's generated code by other developers}
-          \resumeItemListEnd
+            \resumeItem{\textbf{Speeded up} compiler's generated code analysis}
+          \achievementsListEnd
     \resumeSubHeadingListEnd
 %--------------------------------
 
@@ -204,31 +226,53 @@
     \resumeProjectHeading
       {\href{https://github.com/alexbuyan/tg_x_rag}{\underline{\textbf{Telegram bot with integrated RAG model}} \faGithub} $|$ \emph{Python}}{June 2024}
       \resumeItemListStart
-        \resumeItem{\textbf{Combined} \href{https://ollama.com/library/llama3}{\textit{Llama3:8b}} and \href{https://huggingface.co/sentence-transformers}{\textit{sentence-transformers}} embeddings for retrieval-augmented generation}
+        \resumeItem{Combined \href{https://ollama.com/library/llama3}{\textit{Llama3:8b}} and \href{https://huggingface.co/sentence-transformers}{\textit{sentence-transformers}} embeddings for retrieval-augmented generation}
         \resumeItem{Used \href{https://python.langchain.com/v0.1/docs/integrations/vectorstores/chroma/}{\textit{Chroma}} vector database to store user's PDF files}
-        \resumeItem{Developed a \textbf{Telegram bot} to upload PDF files and interact with the RAG model}
+        \resumeItem{Developed a Telegram bot to upload PDF files and interact with the RAG model}
       \resumeItemListEnd
     \resumeProjectHeading
       {\href{https://github.com/alexbuyan/vk-big-data/blob/hw2/notebooks/hw_spark.ipynb}{\underline{\textbf{Movie rating prediction model in Hadoop cluster}} \faGithub} $|$ \emph{Python, Hadoop, Spark}}{Dec. 2024}
       \resumeItemListStart
-        \resumeItem{\textbf{Set up} Hadoop cluster and Spark session to work with datasets}
-        \resumeItem{Worked with datasets using \textbf{PySpark} to describe the data}
-        \resumeItem{\textbf{Trained} SGDRegressor to predict the movie rating based on tags dataset}
+        \resumeItem{Set up Hadoop cluster and Spark session to work with datasets}
+        \resumeItem{Worked with datasets using PySpark to describe the data}
+        \resumeItem{Trained SGDRegressor to predict the movie rating based on tags dataset}
       \resumeItemListEnd
     \resumeProjectHeading
       {\href{https://github.com/alexbuyan/nlp_course/blob/2023/week01_embeddings/homework.ipynb}{\underline{\textbf{Multilingual Embedding-based Machine Translation}} \faGithub} $|$ \emph{Python}}{Sep. 2023}
       \resumeItemListStart
-        \resumeItem{Loaded \textbf{embeddings} for Russian and Ukranian}
-        \resumeItem{Implemented embedding space mapping using \textbf{Linear Regression}}
-        \resumeItem{\textbf{Increased} results with orthogonal transformation \textbf{SVD}}
-        \resumeItem{Developed \textbf{word-based translator} from Ukranian to Russian}
+        \resumeItem{Loaded embeddings for Russian and Ukranian}
+        \resumeItem{Implemented embedding space mapping using Linear Regression}
+        % \resumeItem{Increased results with orthogonal transformation SVD}
+        \resumeItem{Developed word-based translator from Ukranian to Russian}
       \resumeItemListEnd
     \resumeProjectHeading
         {\href{https://huggingface.co/spaces/alexbuyan/yt_videos_comments_devops_projects}{\underline{\textbf{YouTube videos comments project}} \faGithub} $|$ \emph{Python}}{Apr. 2022}
         \resumeItemListStart
-          \resumeItem{\textbf{Trained GPT-2 Large} on dataset of US videos and comments}
+          \resumeItem{Trained GPT-2 Large on dataset of US videos and comments}
           \resumeItem{Developed an app to interact with the model using PyTube and Gradio}
-          \resumeItem{Uploaded project to \textbf{Hugging Face}}
+          \resumeItem{Uploaded project to \href{https://huggingface.co/spaces/alexbuyan/yt_videos_comments_devops_projects}{\textit{Hugging Face}}}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\href{https://github.com/Pdf-Creator/pdf-editor}{\underline{\textbf{PDF Editor with \LaTeX \xspace support}} \faGithub} $|$ \emph{Java}}{Mar. 2022 - June 2022}
+        \resumeItemListStart
+          \resumeItem{Designed a converter of UI objects to PDF document to transfer project's data to PDF file}
+          \resumeItem{Implemented rendering of \LaTeX \xspace equations to allow users to work with math formulas}
+          \resumeItem{Developed a utility to download and save user's files to enable users to save their projects}
+          \resumeItem{Added font support in UI and PDF to empower the customization of documents}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\href{https://github.com/alexbuyan/BPKproject}{\underline{\textbf{Messenger with Trello boards}} \faGithub} $|$ \emph{C++, PostgreSQL, Trello API}}{Jan. 2021 -- May 2021}
+        \resumeItemListStart
+          \resumeItem{Created PostgreSQL database to store users' information}
+          \resumeItem{Implemented curl library wrapper to work with Trello API to support team boards}
+          \resumeItem{Developed server's functionality to handle requests to the database}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\href{https://github.com/Parser-Comparison/Parser-Comparison}{\underline{\textbf{Parser generators comparison}} \faGithub} $|$ \emph{Python, Java, ANTLR4, Parglare}}{Oct. 2021}
+        \resumeItemListStart
+          \resumeItem{Researched basic functionality and limitations of ANTLR4 and Parglare and compared them with other parser generators } \\
+          \resumeItem{Compared generators' performance on ambiguous grammar recognition and collected data for the report} \\
+          \resumeItem{Described research results in the report}
         \resumeItemListEnd
     % \resumeProjectHeading
     %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/hybrid_strategy}{\underline{\textbf{Hybrid Strategy for Timeseries}} \faGithub} $|$ \emph{Python}}{Apr. 2022}

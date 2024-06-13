@@ -126,6 +126,10 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\achievementsListStart}{\begin{itemize}}
+\newcommand{\achievementsListEnd}{\end{itemize}\vspace{-8pt}}
+\newcommand{\dutiesListStart}{\begin{itemize}}
+\newcommand{\dutiesListEnd}{\end{itemize}\vspace{-10pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,49 +151,72 @@
 
 
 %-----------EDUCATION-----------
-\section{Образование}
+\section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {НИУ ВШЭ}{Санкт-Петербург, Россия}
-      {Бакалавриат по специальности "Прикладная математика и информатика"}{Сент. 2020 - Авг. 2024}
+      {Бакалавриат, специальность <<Прикладная математика и информатика>>}{Сен. 2020 - Июнь 2024}
       \resumeItemListStart
-        \resumeItem{\textbf{Релевантные курсы}: \textit{Алгоритмы и Структуры данных, C/C++, Java, Python для Web-разработки, Python для Backend-разработки, Машинное обучение, Базы данных, Компьютерные сети, Математический анализ, Линейная алгебра, Дискретная математика, Теория вероятностей, Математическая статистика}}
-        \resumeItem{\textbf{Курсы от ШАД}: \textit{Машинное обучение, Курс по обработке естественного языка (NLP)}}
+        \resumeItem{\textbf{Пройденные курс}: \textit{Алгоритмы и структуры данных, C/C++, Java, Python для веб-разработки, Python для бэкенд-разработки, Машинное обучение, Базы данных, Компьютерные сети, Математический анализ, Линейная алгебра, Дискретная математика, Теория вероятностей, Математическая статистика}}
+        \resumeItem{\textbf{Курсы ШАД Яндекса}: \textit{Машинное обучение, Обработка естественного языка, Обучение с подкреплением}}
+        \resumeItem{\textbf{Курсы AI Talent Hub}: \textit{Управление проектами в Data Science}}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Навыки}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Языки программирования}{: Java, C/C++, Python, Haskell, TypeScript} \\
-     \textbf{Технологии и фреймворки}{: git, SQL, Docker, \LaTeX, Manim} \\
-     \textbf{Языки}{: Русский, Английский (C1)} \\
-    }}
- \end{itemize}
-%-------------------------------------------
 
 %-----------EXPERIENCE-----------
 \section{Опыт работы}
     \resumeSubHeadingListStart
     \resumeWorkExpHeading
-      {Стажер-разработчик}{Нояб. 2022 - н.в.}
+      {ML Engineer}{Сен. 2023 - н.в.}
+      {Huawei R\&D, Network Scheduling Team}{Санкт-Петербург, Россия}
+    \resumeProjectHeading
+          {\underline{\textbf{Построение избыточных кодов при помощи RL}} $|$ \emph{Python, PyTorch, FastAPI}}{Сен. 2023 - Июнь 2024}
+          \resumeSubSubheading
+            {Обязанности:}{}
+          \dutiesListStart
+            \resumeItem{Разработал ПО RL-FEC для построения избыточных кодов под разные условия и ограничения канала передачи}
+            \resumeItem{Исследовал применение различных RL-алгоритмов (DDQN, SAC, PPO) для построения избыточных кодов}
+            \resumeItem{Разработал FastAPI сервис для оценки эффективности избыточных кодов}
+            \resumeItem{Сравнил полученные при помощи RL-FEC коды с подходами FlexFEC, LDPC и RS-кодами на BEC \\и модели Гильберта}
+          \dutiesListEnd
+          \resumeSubSubheading
+            {Достижения:}{}
+          \achievementsListStart
+            \resumeItem{\textbf{Повысил точность} оценки эффективности избыточных кодов с $\mathbf{10^{-3}}$ до $\mathbf{10^{-6}}$}
+            \resumeItem{\textbf{Ускорил} обучение агента в \textbf{50 раз}}
+            \resumeItem{\textbf{Продемонстрировал преимущество} RL-FEC как \textbf{универсального} похода для построения избыточных кодов}
+          \achievementsListEnd
+    \resumeWorkExpHeading
+      {Software Engineer Intern}{Нояб. 2022 - Сен. 2023}
       {Huawei R\&D, Cangjie Team}{Санкт-Петербург, Россия}
     \resumeProjectHeading
-          {\underline{\textbf{Поддержка CSV файлов для Data-Driven тестирования в Cangjie}} $|$ \emph{Cangjie}}{Сент. 2023}
-          \resumeItemListStart
-            \resumeItem{Реализован CsvParser для Cangjie для \textbf{обработки данных} из CSV файлов}
-            \resumeItem{Разработал CsvStrategy для предоставления данных для модульных тестов и \textbf{добавил} его в Cangjie Test Framework}
-          \resumeItemListEnd
+          {\underline{\textbf{Поддержка CSV файлов для Data-Driven тестирования в Cangjie}} $|$ \emph{Cangjie}}{Сен. 2023}
+          \resumeSubSubheading
+            {Обязанности:}{}
+          \dutiesListStart
+            \resumeItem{Разработал класс CsvParser на языке Cangjie для обработки данных из CSV файлов}
+            \resumeItem{Разработал класс CsvStrategy для предоставления данных для модульных тестов}
+          \dutiesListEnd
+          \resumeSubSubheading
+            {Достижения:}{}
+          \achievementsListStart
+            \resumeItem{\textbf{Добавил} классы в тестовый фреймворк Cangjie}
+          \achievementsListEnd
     \resumeProjectHeading
-          {\underline{\textbf{Декомпилятор LLVM IR для Cangjie}} $|$ \emph{C++, Python, GoogleTest}}{Нояб. 2022 - Июнь 2023}
-          \resumeItemListStart
-            \resumeItem{Разработал инструмент для представления LLVM IR в C-подобном формате, который восстанавливает пакеты, классыы и функции из исходного кода Cangjie, для \textbf{ускорения} анализа порождаемого компилятором кода}
-            \resumeItem{Реализовал обработчик LLVM GEP инстукций для отображения полей класса и их типов при обращения по указателю с целью \textbf{ускорения} читаемости кода}
-            \resumeItem{Скачал исходный код из более чем 300 открытых проектов на Сangjie и создал из них тестовые примеры для \textbf{тестирования} моего инструмента}
-            \resumeItem{Разработал систему параллельного тестирования, которая запускает 30 тестовых примеров по 100000 строк менее чем за минуту, чтобы \textbf{исправить ошибки} в моем инструменте}
+          {\underline{\textbf{Декомпилятор LLVM IR для Cangjie}} $|$ \emph{C++, Python, GoogleTest}}{Nov. 2022 - June 2023}
+          \resumeSubSubheading
+            {Обязанности:}{}
+          \dutiesListStart
+            \resumeItem{Разработал инструмент, который восстанавливает пакеты, классы и функции исходного кода Cangjie в C-подобном формате из внутреннего представления LLVM IR}
+            \resumeItem{Провел тестирование инструмента на более чем 300 открытых проектов на Сangjie}
+            \resumeItem{Разработал систему параллельного тестирования, которая запускает 30 тестовых примеров по 100000 строк менее чем за минуту}
+          \dutiesListEnd
+          \resumeSubSubheading
+            {Достижения:}{}
+          \achievementsListStart
             \resumeItem{\textbf{Распространил} инструмент внутри команды Cangjie для анализа сгенерированного компилятором кода другими разработчиками}
-          \resumeItemListEnd
+            \resumeItem{\textbf{Уменьшил} временные ресурсы команды разработки, затрачиваемые на анализ порождаемого компилятором кода}
+          \achievementsListEnd
     \resumeSubHeadingListEnd
 %--------------------------------
 
@@ -197,38 +224,85 @@
 \section{Проекты}
 \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\href{https://github.com/alexbuyan/nlp_course/blob/2023/week01_embeddings/homework.ipynb}{\underline{\textbf{Машинный перевод при помощи эмбеддингов}} \faGithub} $|$ \emph{Python}}{Сент. 2023}
+      {\href{https://github.com/alexbuyan/tg_x_rag}{\underline{\textbf{Телеграм бот с поддержкой RAG}} \faGithub} $|$ \emph{Python}}{Июнь 2024}
       \resumeItemListStart
-        \resumeItem{Загрузил \textbf{эмбеддинги} для Русского и Украинского}
-        \resumeItem{Построил пространственную карту эмбеддингов при помощи \textbf{Линейной регрессии}}
-        \resumeItem{\textbf{Улучшил} результат при помощи ортогонального преобразования методом \textbf{SVD}}
-        \resumeItem{Разработал \textbf{переводчик} с Украинского на Русский}
+        \resumeItem{Совместил \href{https://ollama.com/library/llama3}{\textit{Llama3:8b}} и \href{https://huggingface.co/sentence-transformers}{\textit{sentence-transformers}} эмбеддинги для создания RAG}
+        \resumeItem{Использовал векторное хранилище \href{https://python.langchain.com/v0.1/docs/integrations/vectorstores/chroma/}{\textit{Chroma}} для хранения информации из пользовательских PDF файлов}
+        \resumeItem{Разработал Телеграм бота для загрузки PDF файлов и взаимодействия со встроенной моделью}
       \resumeItemListEnd
     \resumeProjectHeading
-        {\href{https://huggingface.co/spaces/alexbuyan/yt_videos_comments_devops_projects}{\underline{\textbf{Проект по генерации комментариев к YouTube видео}} \faGithub} $|$ \emph{Python}}{Апр. 2022}
+      {\href{https://github.com/alexbuyan/vk-big-data/blob/hw2/notebooks/hw_spark.ipynb}{\underline{\textbf{Предсказание рейтингов фильмов внутри кластера Hadoop}} \faGithub} $|$ \emph{Python, Hadoop, Spark}}{Дек. 2024}
+      \resumeItemListStart
+        \resumeItem{Настроил Hadoop кластер и Spark сессию для работы с датасетами}
+        \resumeItem{При помощи PySpark обработал датасеты для получения необходимой информации}
+        \resumeItem{Обучил SGDRegressor для предсказания рейтинга фильма на основе тегов}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://github.com/alexbuyan/nlp_course/blob/2023/week01_embeddings/homework.ipynb}{\underline{\textbf{Машинный перевод с украинского на русский}} \faGithub} $|$ \emph{Python}}{Сен. 2023}
+      \resumeItemListStart
+        \resumeItem{Загрузил эмбеддинги для русского и украинского языков}
+        \resumeItem{Построил пространственную карту эмбеддингов при помощи линейной регрессии}
+        % \resumeItem{Increased results with orthogonal transformation SVD}
+        \resumeItem{Реализовал машинный перевод с украинского на русский язык}
+      \resumeItemListEnd
+    \resumeProjectHeading
+        {\href{https://huggingface.co/spaces/alexbuyan/yt_videos_comments_devops_projects}{\underline{\textbf{Генерация комментариев к YouTube видео}} \faGithub} $|$ \emph{Python}}{Апр. 2022}
         \resumeItemListStart
-          \resumeItem{\textbf{Обучил GPT-2 Large} на датасете из амеракинских видео и комментариев}
-          \resumeItem{Разработал приложения для взаимодействия с моделью при помощи PyTube и Gradio}
-          \resumeItem{Выложил проект на \textbf{Hugging Face}}
+          \resumeItem{Обучил GPT-2 Large на датасете американских видео и комментариев}
+          \resumeItem{Разработал приложение для взаимодействия с моделью при помощи PyTube и Gradio}
+          \resumeItem{Загрузил проект на \href{https://huggingface.co/spaces/alexbuyan/yt_videos_comments_devops_projects}{\textit{Hugging Face}}}
         \resumeItemListEnd
     \resumeProjectHeading
-        {\href{https://github.com/alexbuyan/ml_projects/tree/main/hybrid_strategy}{\underline{\textbf{Гибридная стратегия для временных рядов}} \faGithub} $|$ \emph{Python}}{Апр. 2022}
+        {\href{https://github.com/Pdf-Creator/pdf-editor}{\underline{\textbf{PDF редактор с поддержкой \LaTeX \xspace выражений}} \faGithub} $|$ \emph{Java}}{Мар. 2022 - Июнь 2022}
         \resumeItemListStart
-          \resumeItem{Разработал гибридную стратегию для временных рядов из \href{https://www.kaggle.com/c/demand-forecasting-kernels-only}{\underline{\textbf{этого датасета}}}}
-          \resumeItem{Решение получило \textbf{MSE 33.97}}
+          \resumeItem{Разработал конвертер UI объектов в PDF документ для переноса данных проекта в PDF файл}
+          \resumeItem{Реализовал отрисовку \LaTeX \xspace выражений, которая позволяет пользователям работать с математическими формулами}
+          \resumeItem{Разработал утилиту для загрузки и сохранения файлов, чтобы пользователи могли сохранять свои проекты}
+          \resumeItem{Добавил поддержку шрифтов в UI и PDF для возможности кастомизации документов}
         \resumeItemListEnd
     \resumeProjectHeading
-        {\href{https://github.com/alexbuyan/ml_projects/tree/main/resnet18}{\underline{\textbf{ResNet18}} \faGithub} $|$ \emph{Python}}{Март 2021}
+        {\href{https://github.com/alexbuyan/BPKproject}{\underline{\textbf{Мессенджер с досками Trello}} \faGithub} $|$ \emph{C++, PostgreSQL, Trello API}}{Янв. 2021 - Май 2021}
         \resumeItemListStart
-          \resumeItem{Разработал ResidualBlock, ResNetLayer, ResNet18 при помощи PyTorch}
+          \resumeItem{Создал базу данных на PostgreSQL для хранения пользовательских данных}
+          \resumeItem{Разработал обертку над библиотекой curl для взаимодействия с Trello API, чтобы добавить поддержку командных досок}
+          \resumeItem{Разработал функционал сервера для обработки запросов к базе данных}
         \resumeItemListEnd
     \resumeProjectHeading
-        {\href{https://github.com/alexbuyan/ml_projects/tree/main/backprop}{\underline{\textbf{Обратное распространение ошибки}} \faGithub} $|$ \emph{Python}}{Февр. 2022}
+        {\href{https://github.com/Parser-Comparison/Parser-Comparison}{\underline{\textbf{Сравнение парсер-генераторов}} \faGithub} $|$ \emph{Python, Java, ANTLR4, Parglare}}{Окт. 2021}
         \resumeItemListStart
-          \resumeItem{Разработал обратное распространение ошибки для слоя \textbf{BatchNormalization}}
-          \resumeItem{Разработал обратное распространение ошибки для слоя \textbf{Dropout}}
+          \resumeItem{Исследовал функциональность и ограничения ANTLR4 и Parglare и провел сравнение c другими парсер-генераторами} \\
+          \resumeItem{Сравнил производительность генераторов при разборе неоднозначной грамматики и собрал данные экспериментов для отчета} \\
+          \resumeItem{Описал результаты исследования в отчете}
         \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/hybrid_strategy}{\underline{\textbf{Hybrid Strategy for Timeseries}} \faGithub} $|$ \emph{Python}}{Apr. 2022}
+    %     \resumeItemListStart
+    %       \resumeItem{Implemented hybrid strategy for timeseries from \href{https://www.kaggle.com/c/demand-forecasting-kernels-only}{\underline{\textbf{this dataset}}}}
+    %       \resumeItem{The solution got \textbf{MSE 33.97}}
+    %     \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/resnet18}{\underline{\textbf{ResNet18}} \faGithub} $|$ \emph{Python}}{Mar. 2021}
+    %     \resumeItemListStart
+    %       \resumeItem{Developed ResidualBlock, ResNetLayer, ResNet18 using PyTorch}
+    %     \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\href{https://github.com/alexbuyan/ml_projects/tree/main/backprop}{\underline{\textbf{Backpropagation}} \faGithub} $|$ \emph{Python}}{Feb. 2022}
+    %     \resumeItemListStart
+    %       \resumeItem{Implemented backprop for \textbf{BatchNormalization}}
+    %       \resumeItem{Implemented backprop for \textbf{Dropout}}
+    %     \resumeItemListEnd
 \resumeSubHeadingListEnd
+%-------------------------------------------
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Языки программирования}{: Python, C/C++, Java} \\
+     \textbf{Технологии и фреймворки}{: git, PyTorch, StableBaselines, Gymnasium, Docker, FastAPI, LangChain, SQL } \\
+     \textbf{Языки}{: Русский, Английский (C1)} \\
+    }}
+ \end{itemize}
 %-------------------------------------------
 
 %-----------Activities-----------
